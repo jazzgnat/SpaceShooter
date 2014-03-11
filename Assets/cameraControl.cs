@@ -13,10 +13,8 @@ public class cameraControl : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
-		if (target != null) {
-			transform.LookAt (target.transform);	
-		}
+	void LateUpdate() {
+		Vector3 desiredPosition = target.transform.position + offset;
+		transform.position = desiredPosition;
 	}
 }
