@@ -3,7 +3,7 @@ using System.Collections;
 
 public class shipControl : MonoBehaviour {
 	
-	public float rotationAcceleration = 1.0f;
+	public float rotationAcceleration = 20.0f;
 	public Vector3 Direction = new Vector3(0,0,0);
 	public float lowSpeed = 2.0f;
 	public float highSpeed = 100.0f;
@@ -62,7 +62,7 @@ public class shipControl : MonoBehaviour {
 	void FixedUpdate(){
 
 		Vector3 deltaRotationVelocity = Direction * Time.deltaTime * rotationAcceleration;
-		rigidbody.angularVelocity += deltaRotationVelocity;
+		rigidbody.AddRelativeTorque(deltaRotationVelocity);
 		//Vector3 moveForceVelocity = moveForce * speed;
 		//rigidbody.velocity = moveForceVelocity;
 
