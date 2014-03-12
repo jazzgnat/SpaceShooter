@@ -35,7 +35,8 @@ public class shipControl : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.T)) {
 					if (!isMoving) {
-						moveForce = Vector3.Normalize (transform.forward * speed); 
+						moveForce = transform.forward * speed;
+						moveForce = Vector3.Normalize (moveForce); 
 						rigidbody.velocity = moveForce;
 						isMoving = true;
 					} else {

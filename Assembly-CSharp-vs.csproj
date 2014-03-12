@@ -46,6 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\boltControl.cs" />
+     <Compile Include="Assets\boltCreator.cs" />
      <Compile Include="Assets\cameraControl.cs" />
      <Compile Include="Assets\shipControl.cs" />
   </ItemGroup>
